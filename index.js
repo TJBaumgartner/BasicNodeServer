@@ -7,7 +7,7 @@ const server = http.createServer(function(request, response) {
         case "/":
             fs.readFile('pages/index.html', function(error, data) {
                 if(error){
-                    response.writeHead(200);
+                    response.writeHead(404);
                     response.write('Error: File Not Found');
                 }else{
                     response.write(data)
@@ -18,7 +18,7 @@ const server = http.createServer(function(request, response) {
         case "/about":
             fs.readFile('pages/about.html', function(error, data) {
                 if(error){
-                    response.writeHead(200);
+                    response.writeHead(404);
                     response.write('Error: File Not Found');
                 }else{
                     response.write(data)
@@ -29,7 +29,7 @@ const server = http.createServer(function(request, response) {
         case "/contact":
             fs.readFile('pages/contact.html', function(error, data) {
                 if(error){
-                    response.writeHead(200);
+                    response.writeHead(404);
                     response.write('Error: File Not Found');
                 }else{
                     response.write(data)
